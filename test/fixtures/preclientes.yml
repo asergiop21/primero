@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pr_apellido: MyString
+  pr_nombre: MyString
+  pr_domicilio: MyString
+
+two:
+  pr_apellido: MyString
+  pr_nombre: MyString
+  pr_domicilio: MyString

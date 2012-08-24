@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tr_nombre: MyString
+  tr_localidad: 1
+  tr_respon: MyString
+
+two:
+  tr_nombre: MyString
+  tr_localidad: 1
+  tr_respon: MyString

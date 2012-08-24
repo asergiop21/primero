@@ -1,0 +1,27 @@
+<h1>Listado preclientes</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Apellido</th>
+    <th>Nombre</th>
+    <th>Domicilio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @preclientes.each do |precliente| %>
+  <tr>
+    <td><%= precliente.pr_apellido %></td>
+    <td><%= precliente.pr_nombre %></td>
+    <td><%= precliente.pr_domicilio %></td>
+    <td><%= link_to 'Show', precliente %></td>
+    <td><%= link_to 'Edit', edit_precliente_path(precliente) %></td>
+    <td><%= link_to 'Destroy', precliente, :confirm =>'Estas Seguro de Eliminar el Precliente?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Precliente', new_precliente_path %>

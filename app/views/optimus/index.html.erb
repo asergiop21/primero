@@ -1,0 +1,19 @@
+
+<h1>Listing optimus</h1>
+
+<table>
+      <tr>
+          <th>Nombre</th>
+      </tr>
+    <% @optimus.each do |optimu| %>
+      <tr>
+        <td><%= optimu.nombre %></td>
+        <td><%= link_to 'Show', optimu %></td>
+        <td><%= link_to 'Edit', edit_optimu_path(optimu) %></td>
+        <td><%= link_to 'Destroy',optimu, :confirm=> 'Are you sure?', :method =>:delete  %></td>
+      </tr>
+    <% end %>
+</table>
+<br />
+
+<%= link_to 'New Optimu', new_optimu_path %>

@@ -1,0 +1,31 @@
+<h1>Listing tr_planes</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Importe</th>
+    <th>Velocidad</th>
+    <th>Eliminado</th>
+    <th>Us idusuario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tr_planes.each do |tr_plane| %>
+  <tr>
+    <td><%= tr_plane.pl_nombre %></td>
+    <td><%= tr_plane.pl_importe %></td>
+    <td><%= tr_plane.pl_veloc %></td>
+    <td><%= tr_plane.pl_elim %></td>
+    <td><%= tr_plane.us_idusuario %></td>
+    <td><%= link_to 'Show', tr_plane %></td>
+    <td><%= link_to 'Destroy', tr_plane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', tr_plane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tr plane', new_tr_plane_path %>

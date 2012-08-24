@@ -1,0 +1,32 @@
+<%= form_for(@tr_torre) do |f| %>
+  <% if @tr_torre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tr_torre.errors.count, "error") %> prohibited this tr_torre from being saved:</h2>
+
+      <ul>
+      <% @tr_torre.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :tr_nombre %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :Localidad %><br />
+    <%= f.select :tr_localidad, Trlocalidad.all.map {|l| [l.lo_nombre, l.id] }, prompt: "Seleccione una Localidad"  %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :Responsables %><br />
+    <%= f.text_field :tr_respon %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

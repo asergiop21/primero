@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  no_nombre: MyString
+  no_ip: MyString
+  no_idtorres: 1
+  no_iduser: 1
+
+two:
+  no_nombre: MyString
+  no_ip: MyString
+  no_idtorres: 1
+  no_iduser: 1

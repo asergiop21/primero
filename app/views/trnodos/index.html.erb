@@ -1,0 +1,29 @@
+<h1>Listing trnodos</h1>
+
+<table>
+  <tr>
+    <th>No nombre</th>
+    <th>No ip</th>
+    <th>No idtorres</th>
+    <th>No iduser</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trnodos.each do |trnodo| %>
+  <tr>
+    <td><%= trnodo.no_nombre %></td>
+    <td><%= trnodo.no_ip %></td>
+    <td><%= trnodo.no_idtorres %></td>
+    <td><%= trnodo.no_iduser %></td>
+    <td><%= link_to 'Show', trnodo %></td>
+    <td><%= link_to 'Edit', edit_trnodo_path(trnodo) %></td>
+    <td><%= link_to 'Destroy', trnodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trnodo', new_trnodo_path %>

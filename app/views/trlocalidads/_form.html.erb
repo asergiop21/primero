@@ -1,0 +1,33 @@
+<%= form_for(@trlocalidad) do |f| %>
+  <% if @trlocalidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trlocalidad.errors.count, "error") %> prohibited this trlocalidad from being saved:</h2>
+
+      <ul>
+      <% @trlocalidad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :lo_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Cp %><br />
+    <%= f.text_field :lo_cp %>
+  </div>
+  <div class="field">
+    <%= f.label :Dpto %><br />
+    <%= f.text_field :lo_dpto %>
+  </div>
+  <div class="field">
+    <%= f.label :Provincia %><br />
+    <%= f.text_field :lo_provincia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

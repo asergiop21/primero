@@ -1,0 +1,37 @@
+<%= form_for(@tr_plane) do |f| %>
+  <% if @tr_plane.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tr_plane.errors.count, "error") %> prohibited this tr_plane from being saved:</h2>
+
+      <ul>
+      <% @tr_plane.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pl_nombre %><br />
+    <%= f.text_field :pl_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :pl_importe %><br />
+    <%= f.text_field :pl_importe %>
+  </div>
+  <div class="field">
+    <%= f.label :pl_veloc %><br />
+    <%= f.text_field :pl_veloc %>
+  </div>
+  <div class="field">
+    <%= f.label :pl_elim %><br />
+    <%= f.check_box :pl_elim %>
+  </div>
+  <div class="field">
+    <%= f.label :us_idusuario %><br />
+    <%= f.number_field :us_idusuario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

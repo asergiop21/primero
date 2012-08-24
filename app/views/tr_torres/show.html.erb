@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @tr_torre.tr_nombre %>
+</p>
+
+<p>
+  <b>Localidad:</b>
+  <%= @tr_torre.tr_localidad %>
+</p>
+
+<p>
+  <b>Responsable:</b>
+  <%= @tr_torre.tr_respon %>
+</p>
+
+
+<%= link_to 'Edit', edit_tr_torre_path(@tr_torre) %> |
+<%= link_to 'Back', tr_torres_path %>

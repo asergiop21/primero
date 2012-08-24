@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pl nombre:</b>
+  <%= @tr_plane.pl_nombre %>
+</p>
+
+<p>
+  <b>Pl importe:</b>
+  <%= @tr_plane.pl_importe %>
+</p>
+
+<p>
+  <b>Pl veloc:</b>
+  <%= @tr_plane.pl_veloc %>
+</p>
+
+<p>
+  <b>Pl elim:</b>
+  <%= @tr_plane.pl_elim %>
+</p>
+
+<p>
+  <b>Us idusuario:</b>
+  <%= @tr_plane.us_idusuario %>
+</p>
+
+
+<%= link_to 'Edit', edit_tr_plane_path(@tr_plane) %> |
+<%= link_to 'Back', tr_planes_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@optimu) do |f| %>
+  <% if @optimu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@optimu.errors.count, "error") %> prohibited this optimu from being saved:</h2>
+
+      <ul>
+      <% @optimu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<%= form_for(@precliente) do |f| %>
+  <% if @precliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@precliente.errors.count, "error") %> prohibited this precliente from being saved:</h2>
+
+      <ul>
+      <% @precliente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Apellido %><br />
+    <%= f.text_field :pr_apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :pr_nombre %><aside>- Nombre del Precliente - </aside>
+  </div>
+  <div class="field">
+    <%= f.label :Domicilio %><br />
+    <%= f.text_field :pr_domicilio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

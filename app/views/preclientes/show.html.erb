@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Apellido:</b>
+  <%= @precliente.pr_apellido %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @precliente.pr_nombre %>
+</p>
+
+<p>
+  <b>Domicilio:</b>
+  <%= @precliente.pr_domicilio %>
+</p>
+
+
+<%= link_to 'Edit', edit_precliente_path(@precliente) %> |
+<%= link_to 'Back', preclientes_path %>

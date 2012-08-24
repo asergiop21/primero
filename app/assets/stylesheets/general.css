@@ -1,0 +1,22 @@
+/* 
+    Document   : general
+    Created on : 16/07/2012, 17:51:40
+    Author     : sergio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+ aside{
+     color: #D7D7D7;    
+     font-size: 11px;
+     
+ }

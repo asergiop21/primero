@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <%= javascript_include_tag "application" %>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= render "layouts/menu" %>
+    
+  </head>
+  <body>
+<div>
+  <%=yield %>
+</div>
+    
+          </body> 
+</html>

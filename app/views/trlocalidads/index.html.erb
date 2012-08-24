@@ -1,0 +1,29 @@
+<h1>Listing trlocalidads</h1>
+
+<table>
+  <tr>
+    <th>Lo nombre</th>
+    <th>Lo cp</th>
+    <th>Lo dpto</th>
+    <th>Lo provincia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trlocalidads.each do |trlocalidad| %>
+  <tr>
+    <td><%= trlocalidad.lo_nombre %></td>
+    <td><%= trlocalidad.lo_cp %></td>
+    <td><%= trlocalidad.lo_dpto %></td>
+    <td><%= trlocalidad.lo_provincia %></td>
+    <td><%= link_to 'Show', trlocalidad %></td>
+    <td><%= link_to 'Edit', edit_trlocalidad_path(trlocalidad) %></td>
+    <td><%= link_to 'Destroy', trlocalidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trlocalidad', new_trlocalidad_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@trnodo) do |f| %>
+  <% if @trnodo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trnodo.errors.count, "error") %> prohibited this trnodo from being saved:</h2>
+
+      <ul>
+      <% @trnodo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :no_nombre %><br />
+    <%= f.text_field :no_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :no_ip %><br />
+    <%= f.text_field :no_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :no_idtorres %><br />
+    <%= f.number_field :no_idtorres %>
+  </div>
+  <div class="field">
+    <%= f.label :no_iduser %><br />
+    <%= f.number_field :no_iduser %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

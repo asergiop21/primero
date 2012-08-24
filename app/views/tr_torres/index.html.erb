@@ -1,0 +1,27 @@
+<h1>LISTADO DE TORRES</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Localidad</th>
+    <th>Responsable</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tr_torres.each do |tr_torre| %>
+  <tr>
+    <td><%= tr_torre.tr_nombre %></td>
+    <td><%= tr_torre.tr_localidad %></td>
+    <td><%= tr_torre.tr_respon %></td>
+    <td><%= link_to 'Show', tr_torre %></td>
+    <td><%= link_to 'Edit', edit_tr_torre_path(tr_torre) %></td>
+    <td><%= link_to 'Destroy', tr_torre, method=> :delete, :confirm=> 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tr torre', new_tr_torre_path %>
